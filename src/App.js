@@ -6,13 +6,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
+
         <BrowserRouter>
           <Header />
 
           <Route component={Home} path={'/home'} />
           <Route component={Film} path={'/film/:filmID'} />
 
-        </BrowserRouter>
+        </BrowserRouter>        
       </div>
     );
   }

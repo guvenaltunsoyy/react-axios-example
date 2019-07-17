@@ -20,14 +20,11 @@ class HomePage extends React.Component {
         const { films } = this.state;
         return (
             <Container>
-                {/* <ul>
-           {films.map((film,index)=><li key={index}>{film.title}</li>)}
-         </ul> */}
-         <Row sm={3}>
+                <Row sm={3}>
                     {films.map((film, index) =>
-                        <Col key= {index} md={4} style={{margin:5}}><FilmItem key={index} film={film} /></Col>
+                        <Col key={index} md={4} style={{ margin: 5 }}><FilmItem key={index} film={film} /></Col>
                     )}
-                    </Row>
+                </Row>
             </Container>
         );
     }

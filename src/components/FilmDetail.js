@@ -26,15 +26,15 @@ class FilmDetail extends React.Component {
         return (
             <Container>
                 <Card className="text-center">
-                    <Card.Header>{this.props.film.title}</Card.Header>
+                    <Card.Header><h2>{this.props.film.title}</h2></Card.Header>
                     <Card.Body>
-                        <Card.Title>HEY</Card.Title>
+                        <Card.Title>Oyuncular</Card.Title>
                         {
                             this.state.list.map((v,key) => {
-                                return <div key={key}>{v}</div>
+                                return <Card.Text key={key}>{v}</Card.Text>
                             })
                         }
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary" href="/home">Go Home</Button>
                     </Card.Body>
                     <Card.Footer className="text-muted">2 days ago</Card.Footer>
                 </Card>

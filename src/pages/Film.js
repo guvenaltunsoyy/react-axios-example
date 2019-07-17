@@ -9,9 +9,7 @@ class Film extends React.Component {
 
      async componentDidMount() {
         const film = await axios.get('https://swapi.co/api/films/'+(this.props.match.params.filmID));        
-        this.setState({ film: film.data });
-        // console.log(film.data);
-        
+        this.setState({ film: film.data });        
     }
     
 
