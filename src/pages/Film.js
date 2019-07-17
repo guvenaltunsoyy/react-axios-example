@@ -18,8 +18,10 @@ class Film extends React.Component {
     render() {
         return (
             <div>
-                <h1>merhaba</h1>
-                <FilmDetail film={JSON.stringify(this.state.film)}/>
+                {
+                    Object.values(this.state.film).length > 0 && <FilmDetail film={this.state.film}/>
+                }
+                
             </div>
         );
     }
